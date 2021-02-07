@@ -1,4 +1,3 @@
-from api import db
 from api.models import People
 from flask import jsonify
 
@@ -37,7 +36,6 @@ def NOT(queries):
         if query not in queries:
             final_queries.append(query)
     return final_queries
-
 
 
 def GREATER_THAN(property, value):
@@ -84,7 +82,7 @@ def apply_query(query):
     end = query.find("(")
     function_name = query[start:end]
 
-    if function_name in ["EQUAL", "GREATER_THAN", "LESS_THAN", "NOT_EQUAL"]:
+    if function_name in ["EQUAL", "GREATER_THAN", "LESS_THAN"]:
         return eval(query)
 
     elif function_name == "NOT":

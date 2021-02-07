@@ -1,4 +1,4 @@
-from flask import request, flash, jsonify
+from flask import request, flash
 from api import db, app
 from api.models import People
 from utils import apply_query, queries_to_json
