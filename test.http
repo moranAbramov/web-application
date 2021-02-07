@@ -1,0 +1,81 @@
+POST http://localhost:5000/store
+Content-Type: application/json
+
+{
+"id": "a",
+"title": "a",
+"content": "a",
+"views": 1,
+"timestamp": 1
+}
+
+###
+
+POST http://localhost:5000/store
+Content-Type: application/json
+
+{
+"id": "b",
+"title": "b",
+"content": "b",
+"views": 2,
+"timestamp": 2
+}
+
+
+###
+
+POST http://localhost:5000/store
+Content-Type: application/json
+
+{
+"id": "c",
+"title": "c",
+"content": "c",
+"views": 3,
+"timestamp": 3
+}
+
+
+###
+
+GET http://localhost:5000/store?query=EQUAL(id,"a")
+Accept: application/json
+
+###
+
+POST http://localhost:5000/store
+Content-Type: application/json
+
+{
+"id": "b",
+"title": "b",
+"content": "b",
+"views": 2,
+"timestamp": 2
+}
+
+###
+POST http://localhost:5000/store
+Content-Type: application/json
+
+{
+"id": "c",
+"title": "c",
+"content": "c",
+"views": 3,
+"timestamp": 3
+}
+
+
+###
+
+GET http://localhost:5000/store?query=AND(EQUAL(id,"a"),EQUAL(views,1))
+Accept: application/json
+
+###
+
+GET http://localhost:5000/store?query=NOT(EQUAL(id,"a"))
+Accept: application/json
+
+###
