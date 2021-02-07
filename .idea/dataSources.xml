@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="app" uuid="ab30c09b-4781-4b8c-8f7e-2f3423f9f32a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\moran\Documents\Interview\Wix\web-application\app.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="api" uuid="bab6eda3-5e1d-4e14-994a-0e0259f9967a">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Users\moran\Documents\Interview\Wix\web-application\api\api.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
