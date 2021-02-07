@@ -1,7 +1,7 @@
 from flask import request, flash, jsonify
 from api import db, app
 from api.models import People
-from utils import apply_query
+from utils import apply_query, queries_to_json
 
 
 # first page
@@ -17,12 +17,8 @@ def get_query():
     # If no query is provided, display an error in the browser.
     args = request.args
     if "query" in args:
-        store = People.query.all()
-        store_arr = []
-        apply_query(args["query"])
-        for people in store:
-            store_arr.append(people.to_dict())
-        return jsonify(store_arr)
+        queries = apply_query(args["query"])
+        return queries_to_json(queries)
     else:
         flash("No query was requested", 'error')
         return "GET request done!"
