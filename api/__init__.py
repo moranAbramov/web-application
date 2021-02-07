@@ -7,7 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.config.from_object(Config)
 app.config["DEBUG"] = True
-app.config["SECRET_KEY"] = "moran abramov"
+app.config["SECRET_KEY"] = "moran abramov"  # CHANGE THIS LINE
 db = SQLAlchemy(app)
-app.run()
+
+
 from api import routes
